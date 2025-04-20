@@ -1,3 +1,3 @@
 export default function DeleteButton() {
-  return <div>DeleteButton</div>;
+  return <button type='button'>Clear Completed</button>;
 }

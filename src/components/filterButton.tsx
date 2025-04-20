@@ -1,3 +1,3 @@
 export default function FilterButton() {
-  return <div>FilterButton</div>;
+  return <div className='mr-6'>FilterButton</div>;
 }
