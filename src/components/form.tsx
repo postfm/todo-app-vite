@@ -9,10 +9,12 @@ export default function Form() {
           Add new task:
         </label>
         <input
+          id='new-todos-input'
           type='text'
-          name='todo'
+          name='text'
           className='block grow px-2 py-1 bg-white rounded-l-sm'
           placeholder='Add new task here ...'
+          autoComplete='off'
         />
 
         <button
