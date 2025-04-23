@@ -5,14 +5,15 @@ interface TodoProps {
   id: string;
   name: string;
   completed?: boolean;
+  toggleTodoCompleted: (id: string) => void;
 }
 
-export default function Todo({ id, name, completed }: TodoProps) {
+export default function Todo({ id, name, completed, toggleTodoCompleted }: TodoProps) {
   return (
     <li className=''>
       <div className='border-b-1 border-[#EDEDED]'>
         <label
-          className={clsx('text-[#505050] pl-20 py-8 block ', {
+          className={clsx('text-[#505050] pl-20 py-8 block cursor-pointer', {
             'line-through text-[#E6E6E6]': completed,
           })}
         >
@@ -21,6 +22,7 @@ export default function Todo({ id, name, completed }: TodoProps) {
             type='checkbox'
             className='invisible absolute'
             defaultChecked
+            onChange={() => toggleTodoCompleted(id)}
           />
           <span
             className={clsx('absolute w-9 h-9 -ml-16 rounded-full border-1 border-[#EEEEEE]', {
