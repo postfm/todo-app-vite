@@ -1,9 +1,9 @@
 import { IoChevronDown } from 'react-icons/io5';
-import FilterButton from './filterButton';
 import Todo from './todo';
 import { ITodo } from '../interfaces/todo';
 import ClearCompletedButton from './clear-completed-button';
 import { FILTER_MAP, FILTER_NAMES } from '../constants/filter-map';
+import FilterButton from './filter-button';
 
 interface TodoListProps {
   todos: ITodo[];

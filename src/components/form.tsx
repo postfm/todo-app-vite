@@ -25,22 +25,19 @@ export default function Form({ addTodo }: FormProps) {
       onSubmit={handleSubmit}
     >
       <div className='flex items-center w-full mx-auto p-4'>
-        <label
-          htmlFor='todo'
-          className='mr-1'
-        >
+        <label className='mr-1'>
+          <input
+            id='new-todos-input'
+            type='text'
+            name='text'
+            className='block grow px-2 py-1 bg-white rounded-l-sm'
+            placeholder='Add new task here ...'
+            autoComplete='off'
+            value={name}
+            onChange={handleChange}
+          />
           Add new task:
         </label>
-        <input
-          id='new-todos-input'
-          type='text'
-          name='text'
-          className='block grow px-2 py-1 bg-white rounded-l-sm'
-          placeholder='Add new task here ...'
-          autoComplete='off'
-          value={name}
-          onChange={handleChange}
-        />
 
         <button
           type='submit'

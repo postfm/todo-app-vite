@@ -5,7 +5,6 @@ interface FilterButtonProps {
 }
 
 export default function FilterButton({ name, isPressed, setFilter }: FilterButtonProps) {
-  console.log(isPressed);
   return (
     <button
       type='button'

@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import Form from './components/form';
-import TodoList from './components/todoList';
 import { TODOS } from './constants/todos';
 import { nanoid } from 'nanoid';
+import TodoList from './components/todo-list';
 
 function App() {
   const [todos, setTodos] = useState(TODOS);
@@ -27,8 +27,6 @@ function App() {
     const clearedTodos = todos.filter((todo) => !todo.completed);
     setTodos(clearedTodos);
   }
-
-  console.log(filter);
 
   return (
     <main className='w-full min-h-screen bg-[#F5F5F5] font-[Roboto] font-thin'>
